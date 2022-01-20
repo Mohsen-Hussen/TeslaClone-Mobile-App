@@ -4,7 +4,8 @@ import styles from "./styles";
 
 import StyledButton from "../StyledButton/StyledButton";
 
-const CarItem = ({ name, tagline, taglineCTA, image }) => {
+const CarItem = (props) => {
+	const { name, tagline, taglineCTA, image } = props.car;
 	return (
 		<>
 			<ImageBackground source={image} style={styles.image} />
