@@ -4,17 +4,16 @@ import styles from "./styles";
 
 import StyledButton from "../StyledButton/StyledButton";
 
-const CarItem = () => {
+const CarItem = ({ name, tagline, taglineCTA, image }) => {
 	return (
 		<>
-			<ImageBackground
-				source={require("../../assets/images/ModelS.jpeg")}
-				style={styles.image}
-			/>
+			<ImageBackground source={image} style={styles.image} />
 			<View style={styles.carContainer}>
 				<View style={styles.titles}>
-					<Text style={styles.title}>Model S</Text>
-					<Text style={styles.subTitle}>Starting at $69.420</Text>
+					<Text style={styles.title}>{name}</Text>
+					<Text style={styles.subtitle}>
+						{tagline} <Text style={styles.subtitleCTA}>{taglineCTA}</Text>
+					</Text>
 				</View>
 			</View>
 			<View style={styles.buttonsContainer}>
